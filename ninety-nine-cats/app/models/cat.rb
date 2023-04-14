@@ -13,6 +13,13 @@ class Cat < ApplicationRecord
           errors.add(:birth_date, "can't be in the future")
         end
     end
+
+    def age
+      date1 = Date.today
+      date2 = birth_date
+      "#{name} is #{date1.year - date2.year} year's old"
+    end
+
 end
 
 # kitt = Cat.new(name: 'kitt', color: 'orange', birth_date: '2020/01/20', sex: 'F')
