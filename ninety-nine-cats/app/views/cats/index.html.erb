@@ -1,0 +1,15 @@
+<center><h1>All Cats!</h1></center>
+<ul>
+    <% @cats.each do |cat| %>
+    <li>
+        <ul>
+            <li style="border: 1px solid red"><%= cat.name %></li>
+            <li style="border: 1px solid"><%= cat.color %></li>
+            <li style="border: 1px solid"><%= cat.birth_date %></li>
+            <li style="border: 1px solid"><%= cat.sex %></li>
+            <li style="border: 1px solid; margin-bottom: 15px"><%= cat.description %></li>
+
+        </ul>
+    </li>
+    <% end %>
+</ul>

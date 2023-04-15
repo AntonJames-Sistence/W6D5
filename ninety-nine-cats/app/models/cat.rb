@@ -1,5 +1,5 @@
 class Cat < ApplicationRecord
-    CAT_COLORS = ["orange", "white", "black", "gray"]
+    CAT_COLORS = ["ginger", "white", "black", "gray"]
 
     validates :name, presence: true 
     validates :color, presence: true, inclusion: {in: CAT_COLORS}
