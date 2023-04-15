@@ -1,0 +1,41 @@
+<center><div class="main-box" style="display: block; margin: 50px; text-align: center; width: 400px; padding: 20px; background-color: bisque;">
+    <h1>Time to create a new cat:</h1>
+    
+    <form action="<%= cats_url%>" method="POST"">
+        <label for="name" style="font-weight: bold;">Name:
+            <input  type="text" id="name" name="cat[name]" value="<%= @cat.name %>"
+        </label>
+        <br/>
+
+        <label for="birth_date" style="font-weight: bold;">Birth date:
+            <input type="date" id="birth_date" name="cat[birth_date]" value="<%= @cat.birth_date %>"
+        </label>
+        <br/>
+
+        <label for="color" style="font-weight: bold;">Color:
+            <select name="cat[color]" id="color">
+                <option disabled selected>--- Select a color ---</option>
+                <option value="black"> Black </option>
+                <option value="white"> White </option>
+                <option value="gray"> Gray </option>
+                <option value="ginger"> Ginger </option>
+            </select>
+        </label>
+        <br/>
+
+        <input type="radio" name="cat[sex]" value="M" id="cat_sex">
+        <label for cat_sex>Male</label>
+        <input type="radio" name="cat[sex]" value="F" id="cat_sex">
+        <label for cat_sex>Female</label>
+        <br/>
+
+        <label for="description" style="font-weight: bold;">Description:
+            <br>
+            <textarea name="cat[description]"></textarea>
+        </label>
+        <br/>
+
+        <input type="submit" value="Create Cat">
+    </form>
+</div>
+</center>

@@ -1,5 +1,27 @@
-<li><%= @cat.name %></li>
-<li><%= @cat.color %></li>
-<li><%= @cat.birth_date %></li>
-<li><%= @cat.sex %></li>
-<li><%= @cat.description %></li>
+<center><h1><%= @cat.name%>'s profile:</h1></center>
+<center>
+    <table style="border: 1px solid;">
+        <tbody>
+            <tr>
+                <td style="border: 1px solid; font-weight: bold; background: #ffe5e5;">Name:</td>
+                <td style="border: 1px solid; background: #ffe5e5;"><%= @cat.name%></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid; font-weight: bold; background: #cce5ff;">Color:</td>
+                <td style="border: 1px solid; background: #cce5ff;"><%= @cat.color%></td>
+            </td>
+            <tr>
+                <td style="border: 1px solid; font-weight: bold; background: #ffe5e5;">Birthday:</td>
+                <td style="border: 1px solid; background: #ffe5e5;"><%= @cat.birth_date%></td>
+            </td>
+            <tr>
+                <td style="border: 1px solid; font-weight: bold; background: #cce5ff;">Sex:</td>
+                <td style="border: 1px solid; background: #cce5ff;"><%= @cat.sex%></td>
+            </td>
+            <tr>
+                <td style="border: 1px solid; font-weight: bold; background: #ffe5e5;">Description:</td>
+                <td style="border: 1px solid; background: #ffe5e5;"><%= @cat.description%></td>
+            </td>
+        </tbody>
+    </table>
+</center>

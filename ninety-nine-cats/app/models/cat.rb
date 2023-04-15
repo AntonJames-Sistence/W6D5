@@ -3,7 +3,8 @@ class Cat < ApplicationRecord
 
     validates :name, presence: true 
     validates :color, presence: true, inclusion: {in: CAT_COLORS}
-    validates :sex, presence: true, inclusion: {in: ["M", "F"]}
+    validates :sex, presence: true, inclusion: {in: ["M", "F"],
+        message: 'sex is not valid' }
     validate :birth_date_cannot_be_in_the_future
     validates :birth_date, presence: true 
 
